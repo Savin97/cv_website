@@ -2,210 +2,345 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Michael Savin Landing Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="A dashboard for portfolio managers and traders to quantify earnings-related risk before the market reacts."
-  />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Savin | Data / ML Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Top navigation -->
-  <header class="nav">
-    <div class="nav-inner container">
-      <div class="logo">Michael Savin</div>
-      <nav class="nav-links">
-        <a class="breakwater" href="#Breakwater">Breakwater</a>
-        <!-- 
-        <a href="#features">Features</a>
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#faq">FAQ</a>
-        -->
-      </nav>
-      <a href="#cta" class="nav-demo">Breakwater Demo</a>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Michael Savin</div>
+      <div class="nav-links">
+        <a href="#breakwater">Breakwater</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">Background</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Data / ML Portfolio</div>
+        <h1>Built a finance-focused risk engine around earnings events.</h1>
+        <p class="hero-sub">
+          I build data pipelines, engineer predictive features, validate signals out-of-sample,
+          and turn the result into usable products. My flagship project is Breakwater - an
+          earnings-period risk dashboard designed to surface concentrated tail-risk regimes.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://www.harbor-markets.com/breakwater/" target="_blank" rel="noopener noreferrer">
+            Open Breakwater Dashboard
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/Savin97/Savin97" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/michael-savin-0a016513a/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="chip">Python</div>
+          <div class="chip">Pandas</div>
+          <div class="chip">Time-Series Features</div>
+          <div class="chip">ML Validation</div>
+          <div class="chip">Streamlit</div>
+          <div class="chip">Finance / Risk</div>
+        </div>
+      </div>
+
+      <div class="mock-card">
+        <div class="mock-topbar">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+
+        <div class="dashboard-shot">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <strong>Breakwater Risk Snapshot</strong>
+            <span style="color:var(--success); font-size:0.9rem;">Live demo</span>
+          </div>
+
+          <div class="bars">
+            <div class="bar" style="--w: 82%;"></div>
+            <div class="bar" style="--w: 63%;"></div>
+            <div class="bar" style="--w: 91%;"></div>
+            <div class="bar" style="--w: 48%;"></div>
+            <div class="bar" style="--w: 74%;"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Hero / Above the fold -->
-  <main>
-    <section class="hero container">
-      <div class="hero-text">
-        <h1>Earnings risk — quantified before the market reacts.</h1>
-        <p>
-          A dashboard for portfolio managers and traders that flags abnormal
-          earnings-driven price risk using historical reaction patterns,
-          volatility signals, and EPS-surprise behavior.
-        </p>
-        <div class="hero-actions">
-          <a href="#cta" class="btn-primary">See example dashboard</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <!-- Replace this with a real screenshot -->
-        <div class="hero-screenshot-placeholder">
-          
-        </div>
-      </div>
-    </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What this page is meant to show</h2>
+      <p class="section-sub">
+        Not just coursework. Not just notebooks. A real applied project with product thinking,
+        measurable results, and technical depth.
+      </p>
 
-    <!-- Features / Benefits -->
-    <section id="features" class="section-gray">
-      <div class="container">
-        <h2>Turn noisy earnings seasons into clear risk signals.</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Spot asymmetric risk</h3>
-            <p>
-              Identify tickers with unusually high historical volatility around
-              earnings and size positions accordingly.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Flag muted reactions</h3>
-            <p>
-              Detect cases where large EPS surprises produce small price moves –
-              often a signal worth a closer look.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Portfolio-level view</h3>
-            <p>
-              See which holdings are exposed to clustered earnings risk in the
-              same week, sector, or theme.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how-it-works" class="section">
-      <div class="container">
-        <h2>How it works</h2>
-        <div class="grid-2">
-          <div>
-            <ol class="steps">
-              <li>Model ingests historical stock data for a list of stocks from a custom, proprietary database.</li>
-              <li>Engineers relevant statistical and financial features from this data.</li>
-              <li>Scores each ticker and generates risk alerts.</li>
-              <li>Presents the results in a clean, actionable dashboard.</li>
-            </ol>
-          </div>
-          <div id="demo" class="card card-outline">
-            <h3>Example output</h3>
-            <p>
-              For each ticker and earnings date, you’ll see:
-            </p>
-            <ul>
-              <li>Historical average move on earnings</li>
-              <li>Std dev / volatility of reactions</li>
-              <li>Recent EPS surprise vs. price reaction</li>
-              <li>Risk score and alert label</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social proof / For whom -->
-    <section class="section-gray">
-      <div class="container">
-        <h2>Built for data-driven investors.</h2>
-        <br>
-        <div class="grid-3">
-          <div class="pill-card">
-            <h3>Portfolio managers</h3>
-            <p>Stress-test exposure to upcoming earnings weeks.</p>
-          </div>
-          <div class="pill-card">
-            <h3>Quant-curious traders</h3>
-            <p>Add structure to how you think about event risk.</p>
-          </div>
-          <div class="pill-card">
-            <h3>Risk-aware investors</h3>
-            <p>Replace gut feel with consistent rules.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA / Email capture -->
-    <section id="cta" class="section">
-      <div class="container cta-box">
-        <div>
-          <h2>Reach out!</h2>
-          <p style="color:white;">
-            Please feel free to reach out if you have any questions!
-            Type in 
-          </p>
-        </div>
-        <form class="cta-form" id="beta-form">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your email"
-            required
-          />
-          <input
-          type = "text"
-          name="body-text"
-          id="body-text"
-          placeholder="Type your message here..."
-          required
-          />
-          <button type="submit" class="btn-primary">Submit</button>
-          <p class="form-note" id="form-message"></p>
-        </form>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <div class="container">
-        <h2>FAQ</h2>
-        <div class="faq-item">
-          <h3>Is this financial advice?</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Product mindset</h3>
           <p>
-            No. This is a research and analytics tool. It helps you understand
-            historical risk patterns around earnings events. Nothing on this
-            site or in the product is a recommendation to buy or sell any
-            security.
+            Breakwater is not a toy model. It is built as a usable dashboard and reporting workflow,
+            aimed at real financial decision-making around earnings events.
           </p>
         </div>
-        <div class="faq-item">
-          <h3>Who is this for?</h3>
+        <div class="card">
+          <h3>Technical depth</h3>
           <p>
-            Primarily for portfolio managers, serious retail traders, and
-            analysts who want a more systematic view of earnings-linked risk.
+            Multi-stage Python pipeline, time-series feature engineering, event-based labeling,
+            validation logic, and score design grounded in risk concentration.
           </p>
         </div>
-        <div class="faq-item">
-          <h3>What will it cost?</h3>
+        <div class="card">
+          <h3>Clear signal quality</h3>
           <p>
-            During the beta phase, access will be free. Planned pricing later is
-            in the $29–$49/month range for individual users.
+            Focused on finding regimes where large post-earnings moves become much more likely,
+            instead of pretending direction can always be forecasted.
           </p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <section id="breakwater" class="section">
+    <div class="container">
+      <h2 class="section-title">Breakwater</h2>
+      <p class="section-sub">
+        Earnings-period risk engine for identifying stocks and setups with elevated probability of large post-earnings moves.
+      </p>
+
+      <div class="breakwater-wrap">
+        <div class="big-panel">
+          <h3 style="margin-top:0;">What I built</h3>
+          <p style="color:var(--muted);">
+            Breakwater combines event-aware feature engineering, historical earnings behavior,
+            volatility expansion, and momentum stress into a scoring framework that ranks
+            earnings events by tail-risk intensity.
+          </p>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="num">~25%</div>
+              <div class="label">Extreme-move rate in top explosiveness decile</div>
+            </div>
+            <div class="metric">
+              <div class="num">~4%</div>
+              <div class="label">Baseline extreme-move rate</div>
+            </div>
+            <div class="metric">
+              <div class="num">OOS tested</div>
+              <div class="label">Forward-style validation on historical splits</div>
+            </div>
+          </div>
+
+          <div class="mini-list">
+            <div class="mini-item">
+              <strong>Problem</strong>
+              Earnings events create clustered, high-impact moves. Most generic indicators do a poor
+              job isolating when the risk is truly elevated.
+            </div>
+            <div class="mini-item">
+              <strong>Approach</strong>
+              Focus on concentration of tail events: volatility stretch, earnings explosiveness,
+              and momentum fragility combined into a rankable risk framework.
+            </div>
+            <div class="mini-item">
+              <strong>Output</strong>
+              Dashboard views, stock-level risk flags, interpretable score components,
+              and report-ready summaries for decision support.
+            </div>
+          </div>
+        </div>
+
+        <div class="big-panel">
+          <h3 style="margin-top:0;">Technical breakdown</h3>
+          <div class="mini-list">
+            <div class="mini-item">
+              <strong>Data</strong>
+              S&amp;P 500 price history, earnings dates and surprise-related fields, sector information,
+              rolling return and volatility statistics.
+            </div>
+            <div class="mini-item">
+              <strong>Features</strong>
+              Volatility expansion, pre-event drift, momentum stretch, stock-vs-sector stress,
+              historical reaction distributions, event-window context.
+            </div>
+            <div class="mini-item">
+              <strong>Architecture</strong>
+              <code>stage1</code> ingestion → <code>stage2</code> feature engineering →
+              <code>stage3</code> scoring → <code>stage4</code> outputs →
+              <code>stage5</code> reporting/backtesting.
+            </div>
+            <div class="mini-item">
+              <strong>Stack</strong>
+              Python, pandas, numpy, Streamlit, Git, modular pipeline design.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-sub">
+        Breakwater is the centerpiece. The rest should support it, not compete with it.
+      </p>
+
+      <div class="project-list">
+        <div class="project-item">
+          <div class="project-item-top">
+            <h3>Mortgage Approval Classification Project</h3>
+            <span class="tag">ML / Classification</span>
+          </div>
+          <p>
+            End-to-end binary classification workflow for loan approval prediction, including
+            preprocessing, statistical exploration, and model evaluation.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="project-item-top">
+            <h3>Deep Learning Project</h3>
+            <span class="tag">Deep Learning</span>
+          </div>
+          <p>
+            Coursework-driven neural network project showing practical familiarity with modern ML tooling,
+            model training flow, and evaluation logic.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="project-item-top">
+            <h3>Music Data / N-gram Analysis</h3>
+            <span class="tag">Research / Data Analysis</span>
+          </div>
+          <p>
+            Structured symbolic music corpora into analyzable data pipelines, extracted root progressions,
+            and built composer-level comparison outputs from large annotation sets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-sub">
+
+      </p>
+
+      <div class="skills-wrap">
+        <div class="skill-col">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python</li>
+            <li>Pandas / NumPy</li>
+            <li>Modular pipeline design</li>
+            <li>Data wrangling</li>
+          </ul>
+        </div>
+
+        <div class="skill-col">
+          <h3>Machine Learning</h3>
+          <ul>
+            <li>Classification workflows</li>
+            <li>Feature engineering</li>
+            <li>Evaluation / AUC / correlation</li>
+            <li>Out-of-sample validation</li>
+          </ul>
+        </div>
+
+        <div class="skill-col">
+          <h3>Product / Analytics</h3>
+          <ul>
+            <li>Risk-oriented scoring systems</li>
+            <li>Dashboard thinking</li>
+            <li>Interpretability</li>
+            <li>Report-ready outputs</li>
+          </ul>
+        </div>
+
+        <div class="skill-col">
+          <h3>Tools</h3>
+          <ul>
+            <li>Streamlit</li>
+            <li>Git / GitHub</li>
+            <li>Tableau</li>
+            <li>SQL basics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">Background</h2>
+
+      <div class="about">
+        <div class="card">
+          <h3>Education</h3>
+          <p>
+            B.Sc. in Computer Science &amp; Musicology, Tel Aviv University.
+          </p>
+          <ul class="clean">
+            <li>Machine Learning</li>
+            <li>Deep Learning for Data Science</li>
+            <li>Image Analysis &amp; Computer Vision</li>
+            <li>Operating Systems</li>
+            <li>Databases / Information Systems</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Additional Experience</h3>
+          <p>
+            Research assistant work in music-data analysis, plus 9+ years of tutoring in math,
+            physics, and Python. Strong communication, technical explanation, and structured thinking.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">
+        If you'd like to discuss Breakwater, my project work, or data / ML roles, reach out here.
+      </p>
+
+      <div class="card">
+        <h3 style="margin-top:0;">Michael Savin</h3>
+        <p>Data / ML candidate focused on applied analytics, predictive systems, and finance-oriented tooling.</p>
+
+        <div class="contact-box">
+          <a href="mailto:savin992@gmail.com">Email</a>
+          <a href="https://github.com/Savin97/Savin97" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/michael-savin-0a016513a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.harbor-markets.com/breakwater/" target="_blank" rel="noopener noreferrer">Breakwater</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Harbor Markets. All rights reserved.</p>
-      <p class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <span>•</span>
-        <a href="#">Terms</a>
-        <span>•</span>
-        </p>
+    <div class="container">
+      © 2026 Michael Savin
     </div>
   </footer>
-
-  <script src = "script.js" />
 </body>
 </html>
