@@ -1,11 +1,10 @@
 :root {
     --bg: #ffffff;
-    --panel: #f5f7fb;
     --text: #0b0d12;
     --muted: #5c667a;
     --line: #e3e8f0;
-    /* --bg: #0b0d12;
-    --panel: #121722; */
+    /* --bg: #0b0d12; */
+    --panel: #121722;
     --panel-2: #171d2a;
     /* --text: #e8edf5;
     --muted: #a8b2c3;
@@ -57,8 +56,10 @@ img {
     top: 0;
     z-index: 50;
     backdrop-filter: blur(12px);
-    background: rgba(15, 20, 32, 0.78);
+    background: var(--panel);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-content: center;
+    height: 80px;
 }
 
 .nav-inner {
@@ -72,6 +73,9 @@ img {
 }
 
 .brand {
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
     font-weight: 700;
     letter-spacing: 0.2px;
 }
@@ -80,7 +84,7 @@ img {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
-    color: var(--muted);
+    color: #e2e2e2;;
     font-size: 0.95rem;
 }
 
@@ -247,6 +251,7 @@ h1 {
 
 .card {
     background: var(--panel);
+    color:white;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 22px;
@@ -259,7 +264,7 @@ h1 {
 
 .card p {
     margin: 0;
-    color: var(--muted);
+    color: white;
     font-size: 0.97rem;
 }
 
@@ -271,6 +276,7 @@ h1 {
 
 .big-panel {
     background: var(--panel);
+    color:white;
     border: 1px solid var(--line);
     border-radius: 22px;
     padding: 24px;
@@ -291,13 +297,14 @@ h1 {
 }
 
 .metric .num {
+    color: rgb(246, 81, 81);
     font-size: 1.55rem;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
 .metric .label {
-    color: var(--muted);
+    color: white;
     font-size: 0.92rem;
 }
 
@@ -311,7 +318,8 @@ h1 {
     border: 1px solid var(--line);
     border-radius: 14px;
     padding: 14px;
-    background: rgba(255,255,255,0.02);
+    background: #ffffff;
+    color:rgb(0, 0, 0);
 }
 
 .mini-item strong {
@@ -326,6 +334,7 @@ h1 {
 
 .project-item {
     background: var(--panel);
+    color:white;
     border: 1px solid var(--line);
     border-radius: 16px;
     padding: 18px;
@@ -352,17 +361,17 @@ h1 {
     font-size: 0.8rem;
     white-space: nowrap;
 }
-
 .project-item p,
 .project-item li,
 .skill-col li,
 .about p {
-    color: var(--muted);
+    color: white;
 }
 
 ul.clean {
     margin: 10px 0 0;
     padding-left: 18px;
+    color:white;
 }
 
 .skills-wrap {
