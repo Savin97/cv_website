@@ -91,6 +91,7 @@ img {
     font-size: x-large;
     font-weight: 700;
     letter-spacing: 0.2px;
+    
 }
 
 .nav-links {
@@ -374,6 +375,7 @@ h1 {
     padding: 6px 10px;
     font-size: 0.8rem;
     white-space: nowrap;
+    margin-bottom: 5px;
 }
 .project-item p,
 .project-item li,
@@ -437,6 +439,7 @@ footer {
     radial-gradient(rgba(56, 189, 248, 0.12), transparent 35%),
     #070b13;
     color: white;
+    padding-bottom: 15px;
 }
 
 .contact-box {
