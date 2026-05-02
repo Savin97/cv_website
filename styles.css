@@ -103,8 +103,38 @@ img {
 }
 
 .nav-links a:hover {
-  color: var(--accent-2); /* not var(--text), which is black on dark nav */
+  color: var(--accent-2);
 }
+
+.download-link{
+    color: white; 
+    font-size: 14px; 
+    text-decoration: none; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.download-link:hover{
+    color: var(--accent-2);
+}
+
+.download-link svg{
+fill:white;
+enable-background:new 0 0 102.5 122.88;
+
+}
+
+.download-link svg:hover{
+    fill: var(--accent-2);
+    font-size: 14px; 
+    text-decoration: none; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+
 
 .hero {
     padding: 72px 0 40px;
